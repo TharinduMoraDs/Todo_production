@@ -1,6 +1,6 @@
 FROM node:latest
 
-WORKDIR ./
+WORKDIR ./src/app
 
 COPY package*.json ./
 
@@ -8,6 +8,6 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 8000
+EXPOSE 8010
 
-CMD ["npm","start"]
+CMD ["npm","run dev"]
