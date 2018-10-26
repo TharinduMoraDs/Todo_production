@@ -3,7 +3,7 @@ pipeline {
     stages {
 	stage('backend') { 
 		steps{
-			  dir('.'){	
+			  dir('./'){	
 			sh 'docker build -t backend:1.0 .'
 			sh 'docker run --name backend  -d -p 8000:8000 backend'
 		}
