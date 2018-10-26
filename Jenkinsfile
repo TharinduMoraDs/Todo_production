@@ -4,7 +4,7 @@ pipeline {
 	stage('backend-build') { 
 		steps{
 			  dir('./'){	
-			sh 'docker build . -t backend:1'
+			sh 'docker build -t backend .'
 			sh 'docker run --name backend  -d -p 8000:8000 backend'
 		}
 		}
