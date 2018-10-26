@@ -11,7 +11,7 @@ pipeline {
 	}
         stage('frontend-build') { 
             steps {
-                dir('./frontend/src/app'){	
+                dir('./frontend'){	
 			sh 'docker build -t frontend .'
 			sh 'docker run --name frontend -d -p 8010:8010 frontend'
 		}
