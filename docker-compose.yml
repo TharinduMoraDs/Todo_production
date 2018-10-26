@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  app:
+    container_name: todo
+    restart: always
+    build: .
+    ports:
+      - '80:8000'
+
+
