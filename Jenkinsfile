@@ -1,7 +1,7 @@
 pipeline {
     agent any
     stages {
-	stage('backend') { 
+	stage('backend-build') { 
 		steps{
 			  dir('./'){	
 			sh 'docker build -t backend:1.0 .'
@@ -9,7 +9,7 @@ pipeline {
 		}
 		}
 	}
-        stage('frontend') { 
+        stage('frontend-build') { 
             steps {
                 dir('./frontend/src/app'){	
 			sh 'docker build -t frontend:1.1 .'
