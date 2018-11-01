@@ -17,14 +17,6 @@ pipeline {
 		}
 
             }
-        }stage('frontend-build-2') { 
-            steps {
-                dir('./'){	
-			sh 'docker-compose up'
-			
-		}
-
-            }
         }
 	stage('Test') { 
 		steps{
