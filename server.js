@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://178.128.96.45:27017/todo');
+mongoose.connect('mongodb://localhost:27017/todo');
 
 
 
