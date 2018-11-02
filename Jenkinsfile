@@ -13,7 +13,7 @@ pipeline {
             steps {
                 dir('./frontend'){	
 			sh 'docker build -t frontend .'
-			sh 'docker run MONGODB_URI="mongodb://mongo:27071/todo" --link mongo:mongo --name frontend -d -p 8010:8010 frontend'
+			sh 'docker run -e MONGODB_URI="mongodb://mongo:27071/todo" --link mongo:mongo --name frontend -d -p 8010:8010 frontend'
 		}
 
             }
